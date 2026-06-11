@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://baggottsbots.github.io/winvotes-ai/sitemap.xml
+Sitemap: https://www.winvotes.ai/sitemap.xml
