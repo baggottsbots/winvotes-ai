@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/winvotes-ai/">
+<!-- BASE:END -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+
+<!-- SEO Meta Tags -->
+<title>WinVotes.ai | AI Voting &amp; Engagement Platform for Campaign Victory</title>
+<meta name="description" content="Modern, conversion-focused landing page for WinVotes.ai with hero, benefits, features, testimonials, pricing, FAQ, and a lead capture form for campaigns." />
+<meta property="og:title" content="WinVotes.ai | AI Voting &amp; Engagement Platform for Campaign Victory" />
+<meta property="og:description" content="Modern, conversion-focused landing page for WinVotes.ai with hero, benefits, features, testimonials, pricing, FAQ, and a lead capture form for campaigns." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="WinVotes.ai | AI Voting &amp; Engagement Platform for Campaign Victory" />
+<meta name="twitter:description" content="Modern, conversion-focused landing page for WinVotes.ai with hero, benefits, features, testimonials, pricing, FAQ, and a lead capture form for campaigns." />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mqa2r4oz-d44bk";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  var u=new URL(location.href);var found=null;var changed=false;
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{localStorage.setItem(map[p]+slug,v);}catch(e){}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-gate>
+(function(){
+  var slug='lp-mqa2r4oz-d44bk';var apiBase='https://paymegpt.com';var currency='USD';var presets=[2500,5000,10000,25000];var minAmt=100;var maxAmt=1000000;var thankYouMsg='Thank you for your generous donation!';
+  var successSubtext='Your donation has been processed successfully.';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function getLang(){var l=(document.documentElement.lang||navigator.language||'en').toLowerCase();return l.split('-')[0];}
+  function getLocale(){return (document.documentElement.lang||navigator.language||'en');}
+  var I18N={en:{min:'Minimum is ',max:'Maximum is ',emailPrompt:'Enter your email for the receipt:',emailRequired:'An email address is required to complete checkout.',failed:'Failed to process donation'},fr:{min:'Le minimum est ',max:'Le maximum est ',emailPrompt:'Entrez votre adresse e-mail pour le reçu :',emailRequired:'Une adresse e-mail est requise pour finaliser le paiement.',failed:'Échec du traitement du don'},es:{min:'El mínimo es ',max:'El máximo es ',emailPrompt:'Introduce tu correo electrónico para el recibo:',emailRequired:'Se requiere una dirección de correo electrónico para completar el pago.',failed:'No se pudo procesar la donación'},pt:{min:'O mínimo é ',max:'O máximo é ',emailPrompt:'Insira seu e-mail para o recibo:',emailRequired:'Um endereço de e-mail é necessário para concluir o pagamento.',failed:'Falha ao processar a doação'},de:{min:'Mindestbetrag ist ',max:'Höchstbetrag ist ',emailPrompt:'Geben Sie Ihre E-Mail-Adresse für die Quittung ein:',emailRequired:'Eine E-Mail-Adresse ist erforderlich, um den Checkout abzuschließen.',failed:'Spende konnte nicht verarbeitet werden'},it:{min:'Il minimo è ',max:'Il massimo è ',emailPrompt:'Inserisci la tua email per la ricevuta:',emailRequired:"È richiesto un indirizzo email per completare il pagamento.",failed:'Impossibile elaborare la donazione'}};
+  function t(k){var L=getLang();return (I18N[L]&&I18N[L][k])||I18N.en[k];}
+  function fmtD(c){try{return new Intl.NumberFormat(getLocale(),{style:'currency',currency:currency}).format(c/100);}catch(e){return new Intl.NumberFormat('en-US',{style:'currency',currency:currency}).format(c/100);}}
+  function findDonEmail(){var ids=['email','emailAddress','buyer-email','buyerEmail','donor-email','donorEmail','user-email','userEmail','contact-email'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.indexOf('@')>-1)return el.value.trim();}var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.indexOf('@')>-1)return inputs[j].value.trim();}return '';}
+  function findDonName(){var ids=['name','fullName','full-name','donor-name','donorName','customer-name','user-name'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"])');for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}return '';}
+  window.__processDonation=function(a,b,c,d){
+    var amountCents,email='',donorName='',donorMessage='',productName='',productDescription='',quantity=1;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents||(a.amount?Math.round(Number(a.amount)*100):0);
+      email=a.email||'';
+      productName=a.productName||a.label||'';
+      productDescription=a.productDescription||a.description||'';
+      donorName=a.name||a.donorName||'';
+      donorMessage=a.message||a.donorMessage||'';
+      quantity=a.quantity&&parseInt(a.quantity,10)>0?parseInt(a.quantity,10):1;
+    }else{
+      amountCents=typeof a==='number'?a:(parseInt(a,10)||0);
+      var rest=[b,c,d];var nonEmail=[];
+      for(var i=0;i<rest.length;i++){var v=rest[i];if(typeof v==='string'&&v){if(!email&&v.indexOf('@')>-1&&/^[^s@]+@[^s@]+.[^s@]+$/.test(v.trim())){email=v.trim();}else{nonEmail.push(v);}}}
+      donorName=nonEmail[0]||'';donorMessage=nonEmail[1]||'';
+    }
+    if(!email)email=findDonEmail();
+    if(!donorName)donorName=findDonName();
+    if(!amountCents||amountCents<minAmt){alert(t('min')+fmtD(minAmt));return Promise.reject('below_min');}
+    if(amountCents>maxAmt){alert(t('max')+fmtD(maxAmt));return Promise.reject('above_max');}
+    if(!email){var p=window.prompt(t('emailPrompt'),'');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert(t('emailRequired'));return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/donation/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:donorName||'',amountCents:amountCents,message:donorMessage||'',productName:productName||'',productDescription:productDescription||'',quantity:quantity,locale:getLocale(),successUrl:successBase+'?donation=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?donation=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||t('failed'));throw new Error(d.error);}
+    });
+  };
+  window.__donationConfig={currency:currency,presets:presets.map(function(c){return c/100;}),minAmount:minAmt/100,maxAmount:maxAmt/100,formatAmount:fmtD};
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('donation')==='success'){
+      var overlay=document.createElement('div');overlay.id='donation-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">'+esc(thankYouMsg)+'</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(successSubtext)+'</p><button id="lp-don-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var dBtn=document.getElementById('lp-don-success-btn');
+      if(dBtn){dBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4730');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='RcrrwniftU';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-slate-100 antialiased selection:bg-cyan-400/30 selection:text-white">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- ============================================================================ -->
+  <!-- NAVBAR: Brand, primary CTA, and contact info                                 -->
+  <!-- Mobile Padding: Prevents edge clipping on 375px viewports                    -->
+  <!-- ============================================================================ -->
+  <header data-section="navbar" class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/70 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8 lg:px-12" aria-label="Primary">
+      <div class="flex items-center gap-3">
+        <div class="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 font-black text-slate-950">W</div>
+        <div>
+          <a href="/winvotes-ai/" class="block text-lg font-bold tracking-tight text-white">WinVotes.ai</a>
+          <p class="text-xs text-slate-400">AI voting & engagement intelligence</p>
+        </div>
+      </div>
+      <div class="hidden items-center gap-6 md:flex">
+        <a href="#benefits" class="text-sm text-slate-300 hover:text-white">Benefits</a>
+        <a href="#features" class="text-sm text-slate-300 hover:text-white">Features</a>
+        <a href="#pricing" class="text-sm text-slate-300 hover:text-white">Plans</a>
+        <a href="#contact" class="text-sm text-slate-300 hover:text-white">Contact</a>
+        <div class="text-right text-sm">
+          <p class="font-semibold text-white">Ryan Baggott</p>
+          <a href="tel:+18435051657" class="text-cyan-300 hover:text-cyan-200">+1 (843) 505-1657</a>
+        </div>
+      </div>
+      <a href="#contact" class="rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300">Schedule Demo</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- ============================================================================ -->
+    <!-- HERO SECTION: Main conversion area with bold headline and CTA                -->
+    <!-- Features: Political campaign aesthetic, high contrast, trust markers         -->
+    <!-- ============================================================================ -->
+    <section data-section="hero" class="mx-auto max-w-7xl px-4 py-14 md:px-8 md:py-20 lg:px-12">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div class="max-w-2xl">
+          <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-200">
+            <span class="h-2 w-2 rounded-full bg-cyan-300"></span>
+            Built for competitive campaigns, civic organizations, and voter engagement teams
+          </div>
+          <h1 class="max-w-xl text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-7xl">Win Votes With AI</h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+            Predictive intelligence for electoral victory and voter engagement in 2024/2026
+          </p>
+          <p class="mt-5 max-w-xl text-base leading-7 text-slate-400">
+            WinVotes.ai helps campaigns identify persuadable voters, prioritize outreach, track engagement in real time, and turn data into decisive action before Election Day.
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#contact" class="cta-primary rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 px-6 py-4 text-center font-semibold text-slate-950 transition hover:scale-[1.02]">Get Started</a>
+            <a href="#how-it-works" class="cta-secondary rounded-full border border-white/15 px-6 py-4 text-center font-semibold text-white transition hover:bg-white/5">See How It Works</a>
+          </div>
+          <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <p class="text-2xl font-black text-white">24/7</p><p class="text-sm text-slate-400">engagement monitoring</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <p class="text-2xl font-black text-white">AI</p><p class="text-sm text-slate-400">predictive modeling</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <p class="text-2xl font-black text-white">1</p><p class="text-sm text-slate-400">command center</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <p class="text-2xl font-black text-white">Fast</p><p class="text-sm text-slate-400">campaign deployment</p>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card rounded-3xl p-6 shadow-2xl shadow-cyan-950/30">
+          <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-5">
+            <div class="mb-4 flex items-center justify-between">
+              <div>
+                <p class="text-sm text-slate-400">Campaign Intelligence Snapshot</p>
+                <h2 class="text-xl font-bold text-white">Decision-ready insights</h2>
+              </div>
+              <span class="rounded-full bg-emerald-400/15 px-3 py-1 text-xs font-semibold text-emerald-300">Live</span>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <div class="mb-2 flex justify-between text-sm"><span class="text-slate-300">Persuadable universe</span><span class="text-white">78%</span></div>
+                <div class="h-3 overflow-hidden rounded-full bg-slate-800"><div class="h-full w-[78%] rounded-full bg-gradient-to-r from-cyan-400 to-blue-500"></div></div>
+              </div>
+              <div>
+                <div class="mb-2 flex justify-between text-sm"><span class="text-slate-300">Volunteer response lift</span><span class="text-white">+41%</span></div>
+                <div class="h-3 overflow-hidden rounded-full bg-slate-800"><div class="h-full w-[41%] rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400"></div></div>
+              </div>
+              <div>
+                <div class="mb-2 flex justify-between text-sm"><span class="text-slate-300">Message resonance</span><span class="text-white">92%</span></div>
+                <div class="h-3 overflow-hidden rounded-full bg-slate-800"><div class="h-full w-[92%] rounded-full bg-gradient-to-r from-fuchsia-400 to-cyan-400"></div></div>
+              </div>
+            </div>
+            <div class="mt-6 grid grid-cols-2 gap-3">
+              <div class="rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-slate-400">Top issue</p>
+                <p class="mt-1 font-semibold text-white">Economy & cost of living</p>
+              </div>
+              <div class="rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-slate-400">Risk segment</p>
+                <p class="mt-1 font-semibold text-white">Low-turnout supporters</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- TRUST BAR: Social proof and credibility markers                              -->
+    <!-- ============================================================================ -->
+    <section data-section="trust-bar" class="mx-auto max-w-7xl px-4 pb-10 md:px-8 lg:px-12">
+      <div class="rounded-3xl border border-white/10 bg-white/5 px-6 py-6">
+        <div class="grid gap-4 text-center sm:grid-cols-2 lg:grid-cols-4">
+          <p class="text-sm text-slate-300"><span class="font-semibold text-white">Built for campaigns</span> that need speed and precision</p>
+          <p class="text-sm text-slate-300"><span class="font-semibold text-white">Data-driven</span> voter segmentation and follow-up</p>
+          <p class="text-sm text-slate-300"><span class="font-semibold text-white">Automated</span> outreach across channels</p>
+          <p class="text-sm text-slate-300"><span class="font-semibold text-white">Reporting</span> designed for decision-makers</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- BENEFITS SECTION: Key outcomes campaign teams care about                      -->
+    <!-- ============================================================================ -->
+    <section data-section="benefits" id="benefits" class="mx-auto max-w-7xl px-4 py-16 md:px-8 lg:px-12">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl">Benefits that move votes, not just dashboards</h2>
+        <p class="mt-4 text-slate-300">Every feature is focused on one goal: helping your team convert voter attention into measurable campaign momentum.</p>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <article class="glass-card rounded-3xl p-6">
+          <h3 class="text-xl font-bold text-white">Predictive Analytics</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-300">Forecast turnout, identify persuasion windows, and prioritize the voters most likely to change outcomes.</p>
+        </article>
+        <article class="glass-card rounded-3xl p-6">
+          <h3 class="text-xl font-bold text-white">Voter Micro-Targeting</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-300">Segment audiences by issue, geography, behavior, and engagement history for sharper messaging.</p>
+        </article>
+        <article class="glass-card rounded-3xl p-6">
+          <h3 class="text-xl font-bold text-white">Real-Time Engagement Tracking</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-300">See what content is working now so field, digital, and persuasion teams can react immediately.</p>
+        </article>
+        <article class="glass-card rounded-3xl p-6">
+          <h3 class="text-xl font-bold text-white">AI-Powered Outreach</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-300">Automate follow-up emails, reminders, and engagement prompts based on user behavior and campaign rules.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- FEATURES SECTION: Detailed platform capabilities                              -->
+    <!-- ============================================================================ -->
+    <section data-section="features" id="features" class="bg-slate-950/35">
+      <div class="mx-auto max-w-7xl px-4 py-16 md:px-8 lg:px-12">
+        <div class="max-w-3xl">
+          <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl">Everything your campaign needs to win faster</h2>
+          <p class="mt-4 text-slate-300">WinVotes.ai combines predictive modeling, data integration, and automation into one campaign command center.</p>
+        </div>
+        <div class="mt-10 grid gap-6 lg:grid-cols-2">
+          <article class="glass-card rounded-3xl p-6">
+            <h3 class="text-xl font-bold text-white">1. Unified voter data integration</h3>
+            <p class="mt-3 text-slate-300">Import canvassing notes, CRM data, email behavior, event attendance, and social engagement into a single campaign view.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-6">
+            <h3 class="text-xl font-bold text-white">2. Predictive turnout modeling</h3>
+            <p class="mt-3 text-slate-300">Use AI to estimate which supporters need reminders, which undecideds need persuasion, and where to focus resources.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-6">
+            <h3 class="text-xl font-bold text-white">3. Automated message sequencing</h3>
+            <p class="mt-3 text-slate-300">Trigger email and SMS outreach based on voter behavior, form submissions, event RSVPs, and changing campaign priorities.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-6">
+            <h3 class="text-xl font-bold text-white">4. Rapid issue-response intelligence</h3>
+            <p class="mt-3 text-slate-300">Detect trending concerns, message fatigue, and supporter sentiment so your team can stay ahead of the narrative.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-6">
+            <h3 class="text-xl font-bold text-white">5. Field team performance analytics</h3>
+            <p class="mt-3 text-slate-300">Measure volunteer productivity, door-knock conversion, follow-up completion, and content performance in one place.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-6">
+            <h3 class="text-xl font-bold text-white">6. Role-based campaign dashboards</h3>
+            <p class="mt-3 text-slate-300">Give leadership, field, digital, and communications teams the exact metrics they need without clutter or confusion.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- HOW IT WORKS SECTION: Simple workflow for conversion clarity                 -->
+    <!-- ============================================================================ -->
+    <section data-section="how-it-works" id="how-it-works" class="mx-auto max-w-7xl px-4 py-16 md:px-8 lg:px-12">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl">How WinVotes.ai works</h2>
+        <p class="mt-4 text-slate-300">A streamlined workflow designed for fast-moving campaigns and election teams under deadline pressure.</p>
+      </div>
+      <div class="mt-10 grid gap-5 lg:grid-cols-5">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-sm font-semibold text-cyan-300">Step 1</p>
+          <h3 class="mt-2 font-bold text-white">Connect your data</h3>
+          <p class="mt-3 text-sm text-slate-300">Bring in voter files, contact lists, and engagement sources.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-sm font-semibold text-cyan-300">Step 2</p>
+          <h3 class="mt-2 font-bold text-white">Model your priorities</h3>
+          <p class="mt-3 text-sm text-slate-300">AI scores persuasion, turnout, and urgency across segments.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-sm font-semibold text-cyan-300">Step 3</p>
+          <h3 class="mt-2 font-bold text-white">Launch outreach</h3>
+          <p class="mt-3 text-sm text-slate-300">Deploy targeted messaging and campaign automations.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-sm font-semibold text-cyan-300">Step 4</p>
+          <h3 class="mt-2 font-bold text-white">Track engagement</h3>
+          <p class="mt-3 text-sm text-slate-300">Monitor open rates, clicks, attendance, and response signals.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-sm font-semibold text-cyan-300">Step 5</p>
+          <h3 class="mt-2 font-bold text-white">Optimize and win</h3>
+          <p class="mt-3 text-sm text-slate-300">Refine strategy with live insights before the next decision point.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- SOCIAL PROOF SECTION: Testimonials and campaign outcome metrics              -->
+    <!-- ============================================================================ -->
+    <section data-section="testimonials" class="bg-slate-950/35">
+      <div class="mx-auto max-w-7xl px-4 py-16 md:px-8 lg:px-12">
+        <div class="max-w-3xl">
+          <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl">Proof that smarter engagement wins attention</h2>
+          <p class="mt-4 text-slate-300">Campaign teams use WinVotes.ai to sharpen outreach, improve responsiveness, and make every contact count.</p>
+        </div>
+        <div class="mt-10 grid gap-6 lg:grid-cols-3">
+          <figure class="glass-card rounded-3xl p-6">
+            <blockquote class="text-slate-200">“We identified the exact voter segment that was drifting and fixed our message in days, not weeks. Engagement jumped immediately.”</blockquote>
+            <figcaption class="mt-4 text-sm text-slate-400">Campaign Manager · Mid-size congressional race</figcaption>
+            <p class="mt-4 text-2xl font-black text-white">+38% engagement lift</p>
+          </figure>
+          <figure class="glass-card rounded-3xl p-6">
+            <blockquote class="text-slate-200">“The AI scoring system gave our field team a clean priority list every morning. We wasted less time and got more done.”</blockquote>
+            <figcaption class="mt-4 text-sm text-slate-400">Field Director · Local election effort</figcaption>
+            <p class="mt-4 text-2xl font-black text-white">2.4x faster outreach</p>
+          </figure>
+          <figure class="glass-card rounded-3xl p-6">
+            <blockquote class="text-slate-200">“It turned our data into action. Our volunteer follow-up rate improved and our GOTV plan became dramatically sharper.”</blockquote>
+            <figcaption class="mt-4 text-sm text-slate-400">Digital Director · Statewide campaign</figcaption>
+            <p class="mt-4 text-2xl font-black text-white">+26% follow-up completion</p>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- PRICING SECTION: Simple plans for fast conversion                            -->
+    <!-- ============================================================================ -->
+    <section data-section="pricing" id="pricing" class="mx-auto max-w-7xl px-4 py-16 md:px-8 lg:px-12">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl">Plans for teams of every size</h2>
+        <p class="mt-4 text-slate-300">Start lean, scale fast, and upgrade when your campaign footprint expands.</p>
+      </div>
+      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+        <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h3 class="text-xl font-bold text-white">Starter</h3>
+          <p class="mt-2 text-3xl font-black text-cyan-300">For emerging campaigns</p>
+          <ul class="mt-5 space-y-3 text-sm text-slate-300">
+            <li>• Core analytics dashboard</li>
+            <li>• Basic voter segmentation</li>
+            <li>• Email support</li>
+          </ul>
+        </article>
+        <article class="rounded-3xl border border-cyan-400/40 bg-cyan-400/10 p-6 ring-1 ring-cyan-400/20">
+          <h3 class="text-xl font-bold text-white">Professional</h3>
+          <p class="mt-2 text-3xl font-black text-white">For serious operations</p>
+          <ul class="mt-5 space-y-3 text-sm text-slate-200">
+            <li>• Predictive modeling and scoring</li>
+            <li>• Automation workflows</li>
+            <li>• Priority support and onboarding</li>
+          </ul>
+        </article>
+        <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h3 class="text-xl font-bold text-white">Enterprise</h3>
+          <p class="mt-2 text-3xl font-black text-cyan-300">For statewide scale</p>
+          <ul class="mt-5 space-y-3 text-sm text-slate-300">
+            <li>• Custom integrations</li>
+            <li>• Team permissions and reporting</li>
+            <li>• Dedicated strategic support</li>
+          </ul>
+        </article>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <a href="#contact" class="cta-primary rounded-full bg-white px-6 py-4 font-semibold text-slate-950 transition hover:bg-cyan-300">Schedule Demo</a>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- FAQ SECTION: Objection handling for trust and clarity                        -->
+    <!-- ============================================================================ -->
+    <section data-section="faq" class="bg-slate-950/35">
+      <div class="mx-auto max-w-7xl px-4 py-16 md:px-8 lg:px-12">
+        <div class="max-w-3xl">
+          <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl">Frequently asked questions</h2>
+          <p class="mt-4 text-slate-300">Quick answers for campaign teams evaluating AI-powered voter engagement.</p>
+        </div>
+        <div class="mt-10 grid gap-5 lg:grid-cols-2">
+          <details class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <summary class="cursor-pointer font-semibold text-white">Is WinVotes.ai built for small campaigns or larger organizations?</summary>
+            <p class="mt-3 text-sm leading-7 text-slate-300">Both. The platform scales from a local race to a statewide operation with role-based access and configurable workflows.</p>
+          </details>
+          <details class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <summary class="cursor-pointer font-semibold text-white">Can we use our existing data?</summary>
+            <p class="mt-3 text-sm leading-7 text-slate-300">Yes. WinVotes.ai is designed to integrate with common campaign datasets, lists, and engagement tools.</p>
+          </details>
+          <details class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <summary class="cursor-pointer font-semibold text-white">How quickly can we launch?</summary>
+            <p class="mt-3 text-sm leading-7 text-slate-300">Most teams can launch a working pilot quickly after data intake and strategy alignment.</p>
+          </details>
+          <details class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <summary class="cursor-pointer font-semibold text-white">Do you offer support for campaign staff?</summary>
+            <p class="mt-3 text-sm leading-7 text-slate-300">Yes. We provide onboarding, strategy guidance, and support designed for fast decision cycles and high-pressure timelines.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- CONTACT SECTION: Lead capture form with webhook submission                   -->
+    <!-- ============================================================================ -->
+    <section data-section="contact" id="contact" class="mx-auto max-w-7xl px-4 py-16 md:px-8 lg:px-12">
+      <div class="grid gap-10 lg:grid-cols-2">
+        <div>
+          <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl">Book a demo and see the platform in action</h2>
+          <p class="mt-4 max-w-xl text-slate-300">Tell us about your campaign goals, audience, and timeline. We’ll show you how WinVotes.ai can help increase engagement and sharpen your strategy.</p>
+          <div class="mt-8 space-y-4 text-sm text-slate-300">
+            <p><span class="font-semibold text-white">Ryan Baggott</span> · Strategy & Partnerships</p>
+            <p><a class="text-cyan-300 hover:text-cyan-200" href="tel:+18435051657">+1 (843) 505-1657</a></p>
+            <p>Fast response for campaigns, PACs, and civic engagement teams.</p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-3xl p-6 md:p-8">
+          <form id="lead-form" class="contact-form space-y-5" novalidate>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="name" class="mb-2 block text-sm font-medium text-slate-200">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" class="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none placeholder:text-slate-500 focus:border-cyan-400" placeholder="Your name" />
+              </div>
+              <div>
+                <label for="email" class="mb-2 block text-sm font-medium text-slate-200">Email <span class="text-rose-300">*</span></label>
+                <input id="email" name="email" type="email" required autocomplete="email" class="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none placeholder:text-slate-500 focus:border-cyan-400" placeholder="you@campaign.org" />
+              </div>
+            </div>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="phone" class="mb-2 block text-sm font-medium text-slate-200">Phone</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" class="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none placeholder:text-slate-500 focus:border-cyan-400" placeholder="+1 (___) ___-____" />
+              </div>
+              <div>
+                <label for="organization" class="mb-2 block text-sm font-medium text-slate-200">Organization/Campaign</label>
+                <input id="organization" name="organization" type="text" class="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none placeholder:text-slate-500 focus:border-cyan-400" placeholder="Campaign, PAC, or organization" />
+              </div>
+            </div>
+            <div>
+              <label for="message" class="mb-2 block text-sm font-medium text-slate-200">Message</label>
+              <textarea id="message" name="message" rows="5" class="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none placeholder:text-slate-500 focus:border-cyan-400" placeholder="Tell us about your goals, timeline, and what you'd like to improve."></textarea>
+            </div>
+            <button id="submit-btn" type="submit" class="w-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 px-6 py-4 font-semibold text-slate-950 transition hover:brightness-110">Schedule Demo</button>
+            <p id="form-status" class="hidden rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm"></p>
+            <p class="text-xs leading-6 text-slate-400">By submitting, you agree to be contacted about WinVotes.ai. We respect your privacy and use your information only for demo and sales follow-up.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- CTA SECTION: Final conversion push before footer                             -->
+    <!-- ============================================================================ -->
+    <section data-section="cta" class="mx-auto max-w-7xl px-4 pb-16 md:px-8 lg:px-12">
+      <div class="rounded-3xl border border-cyan-400/20 bg-gradient-to-r from-cyan-500/15 to-blue-600/15 p-8 md:p-10">
+        <div class="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div>
+            <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl">Turn campaign data into campaign victory</h2>
+            <p class="mt-3 max-w-2xl text-slate-300">If your team needs sharper targeting, faster insights, and more effective engagement, WinVotes.ai is ready to help.</p>
+          </div>
+          <a href="#contact" class="cta-primary rounded-full bg-white px-6 py-4 text-center font-semibold text-slate-950 transition hover:bg-cyan-300">Get Started</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================================ -->
+  <!-- FOOTER: Contact info, navigation, and legal                                  -->
+  <!-- ============================================================================ -->
+  <footer data-section="footer" class="border-t border-white/10 bg-slate-950">
+    <div class="mx-auto max-w-7xl px-4 py-10 md:px-8 lg:px-12">
+      <div class="grid gap-8 md:grid-cols-3">
+        <div>
+          <p class="text-lg font-bold text-white">WinVotes.ai</p>
+          <p class="mt-3 max-w-sm text-sm leading-7 text-slate-400">AI-powered voter engagement, predictive analytics, and campaign automation built to help teams move faster and win smarter.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-white">Contact</p>
+          <ul class="mt-3 space-y-2 text-sm text-slate-400">
+            <li>Ryan Baggott</li>
+            <li><a href="tel:+18435051657" class="text-cyan-300 hover:text-cyan-200">+1 (843) 505-1657</a></li>
+            <li><a href="mailto:hello@winvotes.ai" class="hover:text-white">hello@winvotes.ai</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-white">Quick Links</p>
+          <ul class="mt-3 space-y-2 text-sm text-slate-400">
+            <li><a href="#benefits" class="hover:text-white">Benefits</a></li>
+            <li><a href="#features" class="hover:text-white">Features</a></li>
+            <li><a href="#pricing" class="hover:text-white">Plans</a></li>
+            <li><a href="#contact" class="hover:text-white">Schedule Demo</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 WinVotes.ai. All rights reserved.</p>
+        <div class="flex gap-5">
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="hover:text-white">LinkedIn</a>
+          <a href="https://x.com" target="_blank" rel="noreferrer" class="hover:text-white">X</a>
+          <a href="https://www.instagram.com" target="_blank" rel="noreferrer" class="hover:text-white">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== LEAD FORM WEBHOOK SUBMISSION =====
+    // Function: handleLeadSubmit()
+    // Purpose: Send contact form data to the webhook, show loading state, and reveal success/error messaging
+    // Trigger: Form submit
+    (function () {
+      const form = document.getElementById('lead-form');
+      const submitBtn = document.getElementById('submit-btn');
+      const statusEl = document.getElementById('form-status');
+      const webhookUrl = 'https://paymegpt.com/api/webhooks/flow/3625/920bbd2762523c5ea579bc29faac60cadee551c888e3c83c95268c3028c54468';
+
+      function setStatus(message, type) {
+        statusEl.textContent = message;
+        statusEl.className = 'rounded-2xl border px-4 py-3 text-sm';
+        if (type === 'success') statusEl.classList.add('border-emerald-400/30', 'bg-emerald-400/10', 'text-emerald-200');
+        else statusEl.classList.add('border-rose-400/30', 'bg-rose-400/10', 'text-rose-200');
+        statusEl.classList.remove('hidden');
+      }
+
+      if (form) {
+        form.addEventListener('submit', async function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(form);
+          const email = (formData.get('email') || '').toString().trim();
+          const name = (formData.get('name') || '').toString().trim();
+          const phone = (formData.get('phone') || '').toString().trim();
+          const organization = (formData.get('organization') || '').toString().trim();
+          const message = (formData.get('message') || '').toString().trim();
+
+          if (!email) {
+            setStatus('Please enter your email address so we can respond to your request.', 'error');
+            return;
+          }
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending...';
+          statusEl.classList.add('hidden');
+
+          try {
+            const payload = {
+              contactEmail: email,
+              contactName: name || undefined,
+              contactPhone: phone || undefined,
+              data: {
+                organization: organization || undefined,
+                message: message || undefined,
+                source: 'WinVotes.ai landing page'
+              }
+            };
+
+            const response = await fetch(webhookUrl, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) throw new Error('Webhook request failed');
+
+            form.reset();
+            form.classList.add('hidden');
+            setStatus("Thank you! We've received your request and will be in touch shortly.", 'success');
+          } catch (err) {
+            setStatus('Something went wrong while sending your request. Please try again in a moment.', 'error');
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Schedule Demo';
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
