@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../styles.css">
 
 
+
 <!-- SEO Meta Tags -->
 <title>Contact | WinVotes.ai &amp;mdash; Election Digital Marketing Beaufort County SC</title>
 <meta name="description" content="Talk to Ryan Baggott at WinVotes.ai about your campaign. Free strategy call, no commitment. Beaufort County election digital marketing firm with a 4-0 win record." />
@@ -229,15 +230,22 @@
   <div class="nav-in">
     <a href="/" class="logo">WinVotes<span>.ai</span></a>
     <ul class="nav-links">
-      <li><a href="/#services">Services</a></li>
-      <li><a href="/#how">How It Works</a></li>
-      <li><a href="/#operator">The Operator</a></li>
-      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="/about/">About</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/" style="color:var(--gold)">Contact</a></li>
     </ul>
-    <a href="#" class="btn btn-gold btn-sm">Start Winning</a>
+    <a href="/contact/" class="btn btn-gold btn-sm nav-cta">Start Winning</a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.body.classList.toggle('menu-open')"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<div class="mobile-menu" onclick="document.body.classList.remove('menu-open')">
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/blog/">Blog</a>
+  <a href="/contact/" class="active">Contact</a>
+  <a href="/contact/" class="btn btn-gold" style="margin-top:14px">Start Winning</a>
+</div>
 
 <section class="contact-hero">
   <div class="wrap">
