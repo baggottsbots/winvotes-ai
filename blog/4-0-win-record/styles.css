@@ -1,0 +1,19 @@
+.post-hero{padding:160px 0 60px;border-bottom:1px solid var(--line)}
+.post-body{max-width:760px;margin:0 auto;padding:70px 24px 100px}
+.post-body h2{font-family:'Archivo';font-weight:900;font-size:1.8rem;color:#fff;margin:48px 0 16px;line-height:1.15}
+.post-body h3{font-family:'Archivo';font-weight:700;font-size:1.3rem;color:var(--gold-soft);margin:36px 0 12px}
+.post-body p{color:var(--muted);font-size:1.06rem;margin-bottom:20px;line-height:1.8}
+.post-body ul{color:var(--muted);font-size:1.04rem;margin:0 0 20px 20px;line-height:1.9}
+.post-body strong{color:#e8e6e0;font-weight:600}
+.post-meta{font-size:.85rem;color:#5a5a5a;margin-top:14px}
+.win-row{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:40px 0}
+.win-card{background:linear-gradient(150deg,rgba(212,175,55,.1),rgba(10,10,10,.4));border:1px solid var(--line);border-radius:12px;padding:26px 22px}
+.win-card .race{font-family:'Archivo';font-weight:700;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.win-card .who{font-family:'Archivo';font-weight:900;font-size:1.2rem;color:#fff;margin-bottom:4px}
+.win-card .result{color:var(--gold-soft);font-weight:600;font-size:.92rem}
+.back-link{display:inline-block;font-family:'Archivo';font-weight:700;font-size:.88rem;color:var(--gold);margin-bottom:30px;letter-spacing:.04em}
+.back-link:hover{text-decoration:underline}
+.cta-box{background:linear-gradient(150deg,rgba(212,175,55,.1),rgba(10,10,10,.4));border:1px solid var(--line);border-radius:14px;padding:40px;text-align:center;margin-top:60px}
+.cta-box h3{font-size:1.5rem;color:#fff;margin-bottom:12px}
+.cta-box p{color:var(--muted);margin-bottom:26px}
+@media(max-width:600px){.win-row{grid-template-columns:1fr}}
