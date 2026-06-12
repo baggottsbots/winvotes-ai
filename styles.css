@@ -35,10 +35,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,10,.78)
 .hero h1 em{font-style:normal;color:var(--gold)}
 .hero p.lede{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--muted);max-width:620px;margin:24px 0 36px}
 .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:70px;max-width:880px}
-.stat{border-left:2px solid var(--gold);padding-left:16px}
-.stat b{font-family:'Archivo';font-weight:900;font-size:clamp(1.6rem,3vw,2.3rem);color:#fff;display:block}
-.stat span{color:var(--muted);font-size:.85rem}
+.hero-list{list-style:none;margin-top:44px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 28px;max-width:680px}
+.hero-list li{padding-left:32px;position:relative;color:#fff;font-family:'Archivo';font-weight:700;font-size:clamp(1rem,1.6vw,1.18rem)}
+.hero-list li::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:20px;height:20px;border-radius:5px;background:var(--gold);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6L9 17l-5-5' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6L9 17l-5-5' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
 
 /* TICKER */
 .ticker{background:var(--gold);color:var(--navy-deep);overflow:hidden;padding:13px 0;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
@@ -121,7 +120,7 @@ footer a{color:var(--gold-soft)}
 
 /* PROOF */
 .proof{background:linear-gradient(180deg,rgba(212,175,55,.06),transparent)}
-.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px}
+.proof-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:54px}
 .proof-card{background:linear-gradient(150deg,rgba(34,34,34,.55),rgba(10,10,10,.4));border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:30px 28px}
 .proof-card .race{font-family:'Archivo';font-weight:700;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
 .proof-card .who{font-family:'Archivo';font-weight:900;font-size:1.3rem;color:#fff;margin-bottom:6px;line-height:1.1}
@@ -140,7 +139,7 @@ footer a{color:var(--gold-soft)}
 
 @media(max-width:900px){
   .nav-links{display:none}
-  .stats{grid-template-columns:repeat(2,1fr)}
+  .hero-list{grid-template-columns:1fr}
   .showcase,.operator,.form-grid{grid-template-columns:1fr;gap:36px}
   .steps{grid-template-columns:1fr}
   .proof-grid{grid-template-columns:1fr}
