@@ -3,7 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+
+
 <script src="https://cdn.tailwindcss.com"></script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -27,6 +37,9 @@
   "slogan": "AI campaign operations that win races."
 }
 </script>
+
+
+<!-- SEO Meta Tags -->
 <title>WinVotes.ai - AI Campaign Operations by Ryan Baggott</title>
 <meta name="description" content="Supercharge your political campaign with AI operations by consultant Ryan Baggott. Serving Beaufort, SC and all 50 states." />
 <meta name="keywords" content="AI campaign operations" />
@@ -38,8 +51,11 @@
 <meta name="twitter:title" content="WinVotes.ai - AI Campaign Operations by Ryan Baggott" />
 <meta name="twitter:description" content="Supercharge your political campaign with AI operations by consultant Ryan Baggott. Serving Beaufort, SC and all 50 states." />
 <meta name="twitter:image" content="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1781269238058_blob.jpeg" />
-<link rel="icon" href="favicon.png" />
-<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1781269183771_blob.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1781269183771_blob.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1781269183771_blob.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1781269183771_blob.png" />
+<!-- End SEO Meta Tags -->
 <script data-lp-token-hydrate>
 (function(){try{
   var slug="winvotes-ai-campaign-operations-beaufort-sc";
@@ -56,44 +72,191 @@
   if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
 }catch(e){}})();
 </script>
+
 <script data-field-replace>
 (function(){
   var params=new URLSearchParams(window.location.search);
   var fields={};
-  var paramMap={'first_name':'firstName','last_name':'lastName','full_name':'fullName','email':'email','phone':'phone','company':'company','city':'city','state':'state','country':'country'};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
   var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
   var hasUrlFields=false;
-  for(var p in paramMap){var v=params.get(p);if(v){fields[paramMap[p]]=v;hasUrlFields=true;}}
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
   var contactId=params.get('contact_id');
-  function esc(s){if(!s)return s;var d=document.createElement('div');d.appendChild(document.createTextNode(s));return d.innerHTML;}
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
   function doReplace(data){
     var r={};
     r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
     r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
     r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
-    r['{{email}}']=esc(data.email||'');r['{{phone}}']=esc(data.phone||'');r['{{company}}']=esc(data.company||'');
-    r['{{city}}']=esc(data.city||'');r['{{state}}']=esc(data.state||'');r['{{country}}']=esc(data.country||'');
-    r['{{date}}']=new Date().toLocaleDateString();r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
     r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
-    if(data.customFields){for(var k in data.customFields){r['{{'+k+'}}']=esc(String(data.customFields[k]||''));}}
-    var hasValues=false;for(var key in r){if(r[key]){hasValues=true;break;}}if(!hasValues)return;
-    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){var p=n.parentNode;if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT;}});
-    var node;while(node=walker.nextNode()){var txt=node.nodeValue;if(txt&&txt.indexOf('{{')>-1){var changed=txt;for(var ph in r){if(r[ph]&&changed.indexOf(ph)>-1){changed=changed.split(ph).join(r[ph]);}}if(changed!==txt)node.nodeValue=changed;}}
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
   }
-  function run(){if(contactId){var xhr=new XMLHttpRequest();xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4735');xhr.onload=function(){if(xhr.status===200){try{var resp=JSON.parse(xhr.responseText);if(resp.success&&resp.contact){var merged=resp.contact;for(var k in fields){merged[k]=fields[k];}doReplace(merged);return;}}catch(e){}}if(hasUrlFields)doReplace(fields);};xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};xhr.send();}else if(hasUrlFields){doReplace(fields);}}
-  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4735');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
 })();
 </script>
 <script data-payment>
 (function(){
-  var slug='fWfdKjuEh';var apiBase='https://paymegpt.com';var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
-  function findEmail(){var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}return '';}
-  function findName(){var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}return '';}
-  var __realProcessPayment=function(a,b,c,d,e){var amountCents,email,productName,productDescription,customerName,quantity;if(a&&typeof a==='object'){amountCents=a.amountCents;email=a.email;productName=a.productName;productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;}else{amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;}if(!email)email=findEmail();if(!customerName)customerName=findName();if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}var successBase=window.location.href.split('?')[0];var __pLoc=(document.documentElement.lang||navigator.language||'en');return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})}).then(function(r){return r.json();}).then(function(d){if(d.checkoutUrl){window.location.href=d.checkoutUrl;}else{alert(d.error||'Failed to process payment');throw new Error(d.error);}});};
+  var slug='fWfdKjuEh';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
   Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
-  document.addEventListener('DOMContentLoaded',function(){var urlParams=new URLSearchParams(window.location.search);if(urlParams.get('payment')==='success'){var pName=urlParams.get('product')||'your item';var overlay=document.createElement('div');overlay.id='payment-success-overlay';overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';document.body.appendChild(overlay);var pBtn=document.getElementById('lp-pay-success-btn');if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}}});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
 })();
-</script>
+</script>  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -244,56 +407,44 @@
   <h2 style="font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(36px,5vw,56px);margin:0 0 48px;">Full-stack AI campaign operations.</h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
 
-    <!-- 1: AI Voter Targeting — people/group icon (clean) -->
+    <!-- AI Voter Targeting -->
     <div class="service-card" style="background:#1a1a1a;">
-      <div class="service-icon">
-        <svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/><path d="M16 3.13a4 4 0 010 7.75"/><path d="M21 21v-2a4 4 0 00-3-3.87"/></svg>
-      </div>
+      <div class="service-icon"><svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 01-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
       <h3 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:22px;margin:0 0 12px;">AI Voter Targeting</h3>
       <p style="color:var(--muted);line-height:1.65;margin:0;">Precision data modeling and outreach lists that maximize every voter contact and put your message in front of the right people.</p>
     </div>
 
-    <!-- 2: Campaign Websites — monitor/screen icon -->
+    <!-- Campaign Websites - monitor icon -->
     <div class="service-card" style="background:#1a1a1a;">
-      <div class="service-icon">
-        <svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-      </div>
+      <div class="service-icon"><svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
       <h3 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:22px;margin:0 0 12px;">Campaign Websites &amp; Landing Pages</h3>
       <p style="color:var(--muted);line-height:1.65;margin:0;">High-converting, mobile-first sites with integrated donation and volunteer forms. Deployed in hours, not weeks.</p>
     </div>
 
-    <!-- 3: SMS & Voice — phone icon -->
+    <!-- SMS & Voice - phone handset icon -->
     <div class="service-card" style="background:#1a1a1a;">
-      <div class="service-icon">
-        <svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      </div>
+      <div class="service-icon"><svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
       <h3 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:22px;margin:0 0 12px;">SMS &amp; Voice Outreach</h3>
       <p style="color:var(--muted);line-height:1.65;margin:0;">Automated, compliant multi-channel voter contact at massive scale. AI-powered conversations that get responses.</p>
     </div>
 
-    <!-- 4: Social & Video — play/video icon -->
+    <!-- Social & Video - play button icon -->
     <div class="service-card" style="background:#1a1a1a;">
-      <div class="service-icon">
-        <svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-      </div>
+      <div class="service-icon"><svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
       <h3 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:22px;margin:0 0 12px;">Social &amp; Video Content</h3>
       <p style="color:var(--muted);line-height:1.65;margin:0;">AI-generated campaign content, candidate videos, and social media management that keeps your race top of mind.</p>
     </div>
 
-    <!-- 5: Real-Time Analytics — bar chart icon -->
+    <!-- Real-Time Analytics - bar chart icon -->
     <div class="service-card" style="background:#1a1a1a;">
-      <div class="service-icon">
-        <svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-      </div>
+      <div class="service-icon"><svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
       <h3 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:22px;margin:0 0 12px;">Real-Time Analytics</h3>
       <p style="color:var(--muted);line-height:1.65;margin:0;">Live dashboards tracking voter contact rates, website conversions, and campaign performance all the way to election night.</p>
     </div>
 
-    <!-- 6: Paid Digital Ads — target icon -->
+    <!-- Paid Digital Ads - target/hits icon -->
     <div class="service-card" style="background:#1a1a1a;">
-      <div class="service-icon">
-        <svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-      </div>
+      <div class="service-icon"><svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
       <h3 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:22px;margin:0 0 12px;">Paid Digital Ads</h3>
       <p style="color:var(--muted);line-height:1.65;margin:0;">Facebook, Instagram, and Google ad campaigns with AI-optimized targeting and spend management across every district.</p>
     </div>
@@ -314,7 +465,7 @@
       </div>
       <div>
         <div class="step-num">02</div>
-        <h3 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:22px;margin:16px 0 12px;">Build &amp; Launch</h3>
+        <h3 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:24px;margin:16px 0 12px;">Build &amp; Launch</h3>
         <p style="color:var(--muted);line-height:1.65;margin:0;">Campaign website, voter lists, and outreach systems deployed in under 10 days. Fast is a competitive advantage.</p>
       </div>
       <div>
@@ -413,8 +564,15 @@
     const links = document.getElementById('nav-links');
     const cta = document.getElementById('nav-cta');
     const btn = document.getElementById('mobile-btn');
-    if (w >= 768) { links.style.display='flex'; cta.style.display='inline-block'; btn.style.display='none'; }
-    else { links.style.display='none'; cta.style.display='none'; btn.style.display='block'; }
+    if (w >= 768) {
+      links.style.display = 'flex';
+      cta.style.display = 'inline-block';
+      btn.style.display = 'none';
+    } else {
+      links.style.display = 'none';
+      cta.style.display = 'none';
+      btn.style.display = 'block';
+    }
   }
   window.addEventListener('resize', setNav);
   setNav();
