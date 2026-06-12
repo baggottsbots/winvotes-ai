@@ -259,10 +259,13 @@
 <body>
 
 <!-- NAV -->
-<nav style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,10,0.97) !important;backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,175,55,0.18);">
+<nav style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,10,0.97) !important;backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,175,55,0.18);" data-section="navbar">
   <div style="max-width:1400px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px;">
-    <div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:26px;letter-spacing:-0.03em;">
-      WinVotes<span style="color:var(--gold)">.ai</span>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <img src="https://paymegpt.com/api/landing-pages/images/coding-agent-assets%2F2%2F1781291748954_29973571-3421-4213-A3B3-83AB6DA3C76E.webp" alt="WinVotes Logo" style="height:40px;width:auto;">
+      <div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:26px;letter-spacing:-0.03em;">
+        WinVotes<span style="color:var(--gold)">.ai</span>
+      </div>
     </div>
     <div style="display:none;gap:40px;font-size:14px;font-weight:500;" id="nav-links">
       <a href="/" style="color:var(--gold);text-decoration:none;">Home</a>
@@ -289,14 +292,14 @@
 </nav>
 
 <!-- HERO IMAGE -->
-<div style="margin-top:72px;width:100%;line-height:0;">
+<div style="margin-top:72px;width:100%;line-height:0;" data-section="section-1">
   <img src="https://paymegpt.com/objects/quick-uploads/2/91648bf322c96d37.jpg"
        alt="WinVotes.ai AI Campaign Operations"
        style="width:100%;height:auto;display:block;object-fit:contain;">
 </div>
 
 <!-- HERO CONTENT -->
-<section style="padding:80px 24px 80px;max-width:1400px;margin:0 auto;">
+<section style="padding:80px 24px 80px;max-width:1400px;margin:0 auto;" data-section="section-2">
   <div style="display:grid;grid-template-columns:1fr;gap:60px;align-items:start;" id="hero-grid">
     <div>
       <div class="section-label">BEAUFORT, SC &bull; ALL 50 STATES</div>
@@ -386,7 +389,7 @@
 </section>
 
 <!-- TICKER -->
-<div style="border-top:1px solid var(--gold-border);border-bottom:1px solid var(--gold-border);background:#141414;padding:16px 0;overflow:hidden;">
+<div style="border-top:1px solid var(--gold-border);border-bottom:1px solid var(--gold-border);background:#141414;padding:16px 0;overflow:hidden;" data-section="section-3">
   <div class="marquee-track">
     <span style="color:var(--gold);font-size:12px;font-weight:700;letter-spacing:4px;">SOUTH CAROLINA</span>
     <span style="color:rgba(255,255,255,0.2);font-size:12px;">•</span>
@@ -416,7 +419,7 @@
 </div>
 
 <!-- SERVICES -->
-<section id="services" style="padding:80px 24px;max-width:1400px;margin:0 auto;">
+<section id="services" style="padding:80px 24px;max-width:1400px;margin:0 auto;" data-section="services">
   <div class="section-label">WHAT WE DELIVER</div>
   <h2 style="font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(36px,5vw,56px);margin:0 0 48px;">Full-stack AI campaign operations.</h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
@@ -493,7 +496,7 @@
 </section>
 
 <!-- HOW IT WORKS -->
-<section id="how" style="background:#141414;padding:80px 24px;">
+<section id="how" style="background:#141414;padding:80px 24px;" data-section="section-4">
   <div style="max-width:1400px;margin:0 auto;">
     <div class="section-label">THE PROCESS</div>
     <h2 style="font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(36px,5vw,56px);margin:0 0 48px;">Simple. Powerful. Effective.</h2>
@@ -518,7 +521,7 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" style="padding:80px 24px;max-width:1400px;margin:0 auto;">
+<section id="about" style="padding:80px 24px;max-width:1400px;margin:0 auto;" data-section="about">
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:60px;align-items:center;">
     <div>
       <div class="section-label">THE OPERATOR</div>
@@ -540,7 +543,7 @@
 </section>
 
 <!-- CONTACT FORM -->
-<section id="contact" style="background:#141414;padding:80px 24px;border-top:1px solid var(--gold-border);">
+<section id="contact" style="background:#141414;padding:80px 24px;border-top:1px solid var(--gold-border);" data-section="contact">
   <div style="max-width:560px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:48px;">
       <div class="section-label">READY TO WIN</div>
@@ -582,7 +585,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer style="border-top:1px solid rgba(255,255,255,0.08);padding:48px 24px;text-align:center;background:#0a0a0a !important;">
+<footer style="border-top:1px solid rgba(255,255,255,0.08);padding:48px 24px;text-align:center;background:#0a0a0a !important;" data-section="footer">
   <div style="max-width:1400px;margin:0 auto;">
     <div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:24px;letter-spacing:-0.02em;margin-bottom:8px;">
       WinVotes<span style="color:var(--gold)">.ai</span>
