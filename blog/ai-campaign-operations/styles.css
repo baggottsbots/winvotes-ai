@@ -13,3 +13,16 @@
 .cta-box{background:linear-gradient(150deg,rgba(212,175,55,.1),rgba(10,10,10,.4));border:1px solid var(--line);border-radius:14px;padding:40px;text-align:center;margin-top:60px}
 .cta-box h3{font-size:1.5rem;color:#fff;margin-bottom:12px}
 .cta-box p{color:var(--muted);margin-bottom:26px}
+
+.menu-btn{display:none;background:none;border:0;cursor:pointer;padding:10px;z-index:120;flex-direction:column;gap:5px}
+.menu-btn span{display:block;width:24px;height:2px;background:var(--gold);transition:.25s}
+body.menu-open .menu-btn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.menu-open .menu-btn span:nth-child(2){opacity:0}
+body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;background:rgba(10,10,10,.97);backdrop-filter:blur(8px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;z-index:110;opacity:0;pointer-events:none;transition:opacity .25s}
+body.menu-open .mobile-menu{opacity:1;pointer-events:auto}
+body.menu-open{overflow:hidden}
+.mobile-menu a{font-family:'Archivo';font-weight:900;font-size:1.9rem;color:#fff;letter-spacing:.01em}
+.mobile-menu a.active{color:var(--gold)}
+.mobile-menu .btn{font-size:1rem}
+@media(max-width:860px){.nav-links{display:none!important}.nav-cta{display:none!important}.menu-btn{display:flex!important}}
