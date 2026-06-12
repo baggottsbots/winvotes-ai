@@ -6,7 +6,7 @@
 <link rel="canonical" href="https://www.winvotes.ai/about/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&sfamily=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 
 <script type="application/ld+json">
@@ -24,7 +24,8 @@
   }
 }
 </script>
- <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../styles.css">
+
 
 
 <!-- SEO Meta Tags -->
@@ -244,20 +245,27 @@
   <div class="nav-in">
     <a href="/" class="logo">WinVotes<span>.ai</span></a>
     <ul class="nav-links">
-      <li><a href="/#services">Services</a></li>
-      <li><a href="/#how">How It Works</a></li>
-      <li><a href="/#operator">The Operator</a></li>
-      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="/about/" style="color:var(--gold)">About</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/">Contact</a></li>
     </ul>
-    <a href="/#contact" class="btn btn-gold btn-sm">Start Winning</a>
+    <a href="/contact/" class="btn btn-gold btn-sm nav-cta">Start Winning</a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.body.classList.toggle('menu-open')"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<div class="mobile-menu" onclick="document.body.classList.remove('menu-open')">
+  <a href="/">Home</a>
+  <a href="/about/" class="active">About</a>
+  <a href="/blog/">Blog</a>
+  <a href="/contact/">Contact</a>
+  <a href="/contact/" class="btn btn-gold" style="margin-top:14px">Start Winning</a>
+</div>
 
 <section class="about-hero">
   <div class="wrap">
     <span class="kicker">About WinVotes.ai</span>
-    <h1 style="font-family:'Archivo';font-size:clamp(2.4rem,5vw,2rem);font-weight:900;color:#fff;max-width:760px;margin:18px 0 20px;line-height:1.08">Beaufort County's election digital marketing firm. 4 races. 4 wins.</h1>
+    <h1 style="font-family:'Archivo';font-size:clamp(2.4rem,5vw,4rem);font-weight:900;color:#fff;max-width:760px;margin:18px 0 20px;line-height:1.08">Beaufort County's election digital marketing firm. 4 races. 4 wins.</h1>
     <p style="color:var(--muted);max-width:580px;font-size:1.1rem">Built in the South Carolina Lowcountry. Trusted by sheriffs, county council members, and the local GOP. Available for campaigns nationwide.</p>
   </div>
 </section>
