@@ -20,6 +20,8 @@
     padding: 0;
   }
   section, header, footer, nav, main, article, aside, div, span { background-color: transparent; }
+  svg { display: inline-block; overflow: visible; }
+  svg *, svg path, svg rect, svg line, svg circle, svg polygon, svg polyline, svg ellipse { vector-effect: non-scaling-stroke; }
   input, textarea, select {
     background-color: #0a0a0a !important;
     color: #f2f0eb !important;
