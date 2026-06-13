@@ -21,7 +21,7 @@ h1,h2,h3{font-family:'Archivo',system-ui,sans-serif;letter-spacing:-0.02em}
 .topbar-in{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{font-family:'Archivo',sans-serif;font-weight:900;font-size:22px;letter-spacing:-0.03em;color:#fff}
 .logo span{color:var(--gold)}
-.btn{display:inline-flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:900;border-radius:12px;text-decoration:none;cursor:pointer;transition:background .2s,transform .1s;border:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:900;border-radius:12px;text-decoration:none;cursor:pointer;transition:background .2s,transform .1s;border:none;padding:14px 32px}
 .btn-gold{background:var(--gold);color:var(--black)}
 .btn-gold:hover{background:var(--gold-light)}
 .kicker{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
@@ -48,6 +48,7 @@ footer a{color:#444}
 .cta-box{background:linear-gradient(150deg,rgba(212,175,55,.1),rgba(10,10,10,.4));border:1px solid var(--line);border-radius:14px;padding:40px;text-align:center;margin-top:60px}
 .cta-box h3{font-size:1.5rem;color:#fff;margin-bottom:12px}
 .cta-box p{color:var(--muted);margin-bottom:26px}
+.cta-box .btn{margin-top:8px}
 @media(max-width:600px){.stat-row{grid-template-columns:1fr}}
 
 .hbtn{background:none;border:0;cursor:pointer;padding:10px;z-index:120;display:flex;flex-direction:column;gap:5px}
