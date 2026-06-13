@@ -67,6 +67,22 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
 .field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 18px center}
 .form-note{text-align:center;font-size:12px;color:var(--muted);margin-top:14px}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,10,0.97)!important;backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,175,55,0.18)}
+.topbar-in{max-width:1400px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:'Archivo',sans-serif;font-weight:900;font-size:22px;letter-spacing:-0.03em;color:#fff;text-decoration:none;display:flex;align-items:center}
+.logo span{color:var(--gold)}
+.hbtn{background:none;border:0;cursor:pointer;padding:10px;z-index:120;display:flex;flex-direction:column;gap:5px}
+.hbtn span{display:block;width:24px;height:2px;background:var(--gold);transition:.25s}
+body.menu-open .hbtn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.menu-open .hbtn span:nth-child(2){opacity:0}
+body.menu-open .hbtn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.overlay{position:fixed;inset:0;background:rgba(10,10,10,.97);backdrop-filter:blur(8px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;z-index:110;opacity:0;pointer-events:none;transition:opacity .25s;visibility:hidden}
+body.menu-open .overlay{opacity:1;pointer-events:auto;visibility:visible}
+body.menu-open{overflow:hidden}
+.overlay a{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.9rem;color:#fff;letter-spacing:.01em;text-decoration:none}
+.overlay a.active{color:var(--gold)}
+.overlay .menu-cta{display:inline-flex;align-items:center;justify-content:center;font-size:1rem;padding:14px 32px;border-radius:12px;background:var(--gold);color:var(--black);margin-top:14px}
+.overlay .menu-cta:hover{background:var(--gold-light)}
 footer{border-top:1px solid rgba(255,255,255,.08);padding:48px 24px;text-align:center;background:#0a0a0a!important}
 .flogo{font-family:'Archivo',sans-serif;font-weight:900;font-size:24px;letter-spacing:-0.02em;color:#fff}
 .flogo span{color:var(--gold)}
