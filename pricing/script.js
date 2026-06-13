@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded',function(){
   const PRICES={websiteBase:699,websiteAdd:199,video:450,social:1999};
-  const state={websiteQty:1,videoQty:0,socialQty:0};
+  const state={websiteQty:0,videoQty:0,socialQty:0};
   const $=id=>document.getElementById(id);
   const els={websiteQty:$('websiteQty'),videoQty:$('videoQty'),socialQty:$('socialQty'),websiteTotal:$('websiteTotal'),videoTotal:$('videoTotal'),socialTotal:$('socialTotal'),breakdown:$('totalsBreakdown'),total:$('totalDisplay'),btn:$('checkoutBtn'),note:$('checkoutNote'),email:$('email')};
   const money=n=>'$'+n.toLocaleString();
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded',function(){
   }
 
   function update(m,d){
-    const lim={website:{min:1,max:10},video:{min:0,max:10},social:{min:0,max:12}};
+    const lim={website:{min:0,max:10},video:{min:0,max:10},social:{min:0,max:12}};
     const key={website:'websiteQty',video:'videoQty',social:'socialQty'}[m];
     state[key]=Math.min(lim[m].max,Math.max(lim[m].min,state[key]+d));
     render();
