@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.winvotes.ai/blog/seifert-sheriff-win/</loc>
+    <lastmod>2026-06-13T00:12:05.735Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.winvotes.ai/blog/ai-campaign-operations/</loc>
+    <lastmod>2026-06-13T00:11:32.292Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.winvotes.ai/blog/4-0-win-record/</loc>
+    <lastmod>2026-06-13T00:10:36.218Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.winvotes.ai/</loc>
+    <lastmod>2026-06-12T23:44:42.704Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://www.winvotes.ai/blog/</loc>
     <lastmod>2026-06-12T19:50:37.725Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -13,26 +33,6 @@
   <url>
     <loc>https://www.winvotes.ai/about/</loc>
     <lastmod>2026-06-12T19:35:27.385Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.winvotes.ai/</loc>
-    <lastmod>2026-06-12T19:23:42.958Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.winvotes.ai/blog/ai-campaign-operations/</loc>
-    <lastmod>2026-06-12T14:59:01.954Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.winvotes.ai/blog/4-0-win-record/</loc>
-    <lastmod>2026-06-12T14:53:26.052Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.winvotes.ai/blog/seifert-sheriff-win/</loc>
-    <lastmod>2026-06-12T14:28:55.028Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
