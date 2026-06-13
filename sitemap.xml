@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.winvotes.ai/about/</loc>
+    <lastmod>2026-06-13T23:11:38.970Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.winvotes.ai/blog/ai-campaign-operations/</loc>
+    <lastmod>2026-06-13T23:07:48.780Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://www.winvotes.ai/pricing/</loc>
     <lastmod>2026-06-13T23:07:35.593Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -16,11 +26,6 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://www.winvotes.ai/blog/ai-campaign-operations/</loc>
-    <lastmod>2026-06-13T23:07:23.766Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
     <loc>https://www.winvotes.ai/blog/4-0-win-record/</loc>
     <lastmod>2026-06-13T23:07:20.083Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -28,11 +33,6 @@
   <url>
     <loc>https://www.winvotes.ai/blog/</loc>
     <lastmod>2026-06-13T23:07:16.322Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.winvotes.ai/about/</loc>
-    <lastmod>2026-06-13T23:07:12.691Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
