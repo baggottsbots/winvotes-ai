@@ -226,13 +226,13 @@
 </script>  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="topbar">
+<div class="topbar" data-section="section-1">
   <div class="topbar-in">
-    <a href="/" class="logo">WinVotes<span>.ai</span></a>
+    <a href="/" class="logo"><img src="https://paymegpt.com/api/landing-pages/images/coding-agent-assets%2F2%2F1781291748954_29973571-3421-4213-A3B3-83AB6DA3C76E.webp" alt="WinVotes" style="height:32px;width:auto;margin-right:8px;display:inline-block;vertical-align:middle">WinVotes<span>.ai</span></a>
     <button class="hbtn" aria-label="Menu" onclick="document.body.classList.toggle('menu-open')"><span></span><span></span><span></span></button>
   </div>
 </div>
-<div class="overlay" onclick="document.body.classList.remove('menu-open')">
+<div class="overlay" onclick="document.body.classList.remove('menu-open')" data-section="section-2">
   <a href="/">Home</a>
   <a href="/about/">About</a>
   <a href="/blog/" class="active">Blog</a>
@@ -240,7 +240,7 @@
   <a href="/contact/" class="btn btn-gold" style="margin-top:14px">Start Winning</a>
 </div>
 
-<section class="post-hero">
+<section class="post-hero" data-section="hero">
   <div class="wrap" style="max-width:860px">
     <a href="/blog/" class="back-link">&larr; Back to Blog</a>
     <span class="kicker">Track Record &middot; Beaufort County SC &middot; Election Marketing</span>
@@ -250,7 +250,7 @@
   </div>
 </section>
 
-<article class="post-body">
+<article class="post-body" data-section="section-3">
 
   <div class="win-row">
     <div class="win-card"><div class="race">Sheriff &middot; 2022</div><div class="who">P.J. Tanner</div><div class="result">Won &mdash; Beaufort County Sheriff</div></div>
@@ -289,7 +289,7 @@
 
 </article>
 
-<footer>
+<footer data-section="footer">
   <div class="flogo">WinVotes<span>.ai</span></div>
   <div style="margin:14px 0 10px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap">
     <a href="/" style="color:var(--muted);font-size:.88rem">Home</a>
