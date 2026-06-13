@@ -229,10 +229,13 @@
 </script>  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<nav style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,10,0.97) !important;backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,175,55,0.18);">
+<nav style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,10,0.97) !important;backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,175,55,0.18);" data-section="navbar">
   <div style="max-width:1400px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px;">
-    <div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:26px;letter-spacing:-0.03em;">
-      <a href="/" style="color:var(--ink);text-decoration:none;">WinVotes<span style="color:var(--gold)">.ai</span></a>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <img src="https://paymegpt.com/api/landing-pages/images/coding-agent-assets%2F2%2F1781291748954_29973571-3421-4213-A3B3-83AB6DA3C76E.webp" alt="WinVotes Logo" style="height:40px;width:auto;">
+      <div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:26px;letter-spacing:-0.03em;">
+        <a href="/" style="color:var(--ink);text-decoration:none;">WinVotes<span style="color:var(--gold)">.ai</span></a>
+      </div>
     </div>
     <div style="display:none;gap:40px;font-size:14px;font-weight:500;" id="nav-links">
       <a href="/" style="color:var(--ink);text-decoration:none;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='#f2f0eb'">Home</a>
@@ -258,7 +261,7 @@
   </div>
 </nav>
 
-<section class="blog-hero">
+<section class="blog-hero" data-section="hero">
   <div class="wrap">
     <span class="kicker">From The Field</span>
     <h1 style="font-family:'Archivo';font-size:clamp(2.4rem,5vw,4rem);font-weight:900;color:#fff;max-width:700px;margin:16px auto 20px">Campaign Strategy &amp; Election Marketing</h1>
@@ -266,7 +269,7 @@
   </div>
 </section>
 
-<section style="padding-top:0;padding-bottom:120px">
+<section style="padding-top:0;padding-bottom:120px" data-section="section-1">
   <div class="wrap">
     <div class="blog-grid">
 
@@ -307,7 +310,7 @@
   </div>
 </section>
 
-<footer>
+<footer data-section="footer">
   <div class="flogo">WinVotes<span>.ai</span></div>
   <nav style="margin:14px 0 10px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap">
     <a href="/" style="color:var(--muted);font-size:.88rem">Home</a>
