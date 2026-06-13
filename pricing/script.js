@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded',function(){
     els.socialTotal.textContent=money(lt.social);
 
     const rows=[];
-    if(state.websiteQty>0)rows.push(`<div class="totals-row"><span>Campaign Website × ${state.websiteQty}</span><span>${money(lt.website)}</span></div>`);
-    if(state.videoQty>0)rows.push(`<div class="totals-row"><span>Video Production × ${state.videoQty}</span><span>${money(lt.video)}</span></div>`);
-    if(state.socialQty>0)rows.push(`<div class="totals-row"><span>Social Media × ${state.socialQty} mo</span><span>${money(lt.social)}</span></div>`);
+    if(state.websiteQty>0)rows.push(`<div class="totals-row"><span>Campaign Website \xd7 ${state.websiteQty}</span><span>${money(lt.website)}</span></div>`);
+    if(state.videoQty>0)rows.push(`<div class="totals-row"><span>Video Production \xd7 ${state.videoQty}</span><span>${money(lt.video)}</span></div>`);
+    if(state.socialQty>0)rows.push(`<div class="totals-row"><span>Social Media \xd7 ${state.socialQty} mo</span><span>${money(lt.social)}</span></div>`);
     els.breakdown.innerHTML=rows.join('');
 
     const total=lt.website+lt.video+lt.social;
