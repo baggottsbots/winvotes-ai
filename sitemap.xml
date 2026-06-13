@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.winvotes.ai/contact/</loc>
+    <lastmod>2026-06-13T23:07:31.076Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://www.winvotes.ai/blog/seifert-sheriff-win/</loc>
     <lastmod>2026-06-13T23:07:27.559Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -28,11 +33,6 @@
   <url>
     <loc>https://www.winvotes.ai/</loc>
     <lastmod>2026-06-13T23:07:07.975Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.winvotes.ai/contact/</loc>
-    <lastmod>2026-06-13T23:00:50.181Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
