@@ -2,7 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.winvotes.ai/blog/4-0-win-record/</loc>
-    <lastmod>2026-06-13T00:39:16.678Z</lastmod>
+    <lastmod>2026-06-13T00:44:22.333Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.winvotes.ai/</loc>
+    <lastmod>2026-06-13T00:43:18.667Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -13,11 +18,6 @@
   <url>
     <loc>https://www.winvotes.ai/blog/seifert-sheriff-win/</loc>
     <lastmod>2026-06-13T00:31:30.149Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.winvotes.ai/</loc>
-    <lastmod>2026-06-12T23:44:42.704Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
