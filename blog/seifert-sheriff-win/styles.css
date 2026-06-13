@@ -43,7 +43,7 @@ footer a{color:#444}
 .stat-box{background:linear-gradient(150deg,rgba(212,175,55,.1),rgba(10,10,10,.4));border:1px solid var(--line);border-radius:12px;padding:26px 20px;text-align:center}
 .stat-box .num{font-family:'Archivo';font-weight:900;font-size:2.4rem;color:var(--gold);display:block}
 .stat-box .lbl{font-size:.82rem;color:var(--muted);margin-top:6px}
-.back-link{display:inline-block;font-family:'Archivo';font-weight:700;font-size:.88rem;color:var(--gold);margin-bottom:30px;letter-spacing:.04em}
+.back-link{display:block;width:fit-content;font-family:'Archivo';font-weight:700;font-size:.88rem;color:var(--gold);margin-bottom:24px;letter-spacing:.04em}
 .back-link:hover{text-decoration:underline}
 .cta-box{background:linear-gradient(150deg,rgba(212,175,55,.1),rgba(10,10,10,.4));border:1px solid var(--line);border-radius:14px;padding:40px;text-align:center;margin-top:60px}
 .cta-box h3{font-size:1.5rem;color:#fff;margin-bottom:12px}
