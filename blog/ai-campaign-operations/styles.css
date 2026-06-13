@@ -41,7 +41,7 @@ footer a{color:#444}
 .post-meta{font-size:.85rem;color:#5a5a5a;margin-top:14px}
 .pull-quote{border-left:3px solid var(--gold);padding:20px 28px;margin:40px 0;background:rgba(212,175,55,.05);border-radius:0 10px 10px 0}
 .pull-quote p{color:#e8e6e0;font-size:1.18rem;font-style:italic;margin:0;line-height:1.65}
-.back-link{display:inline-block;font-family:'Archivo';font-weight:700;font-size:.88rem;color:var(--gold);margin-bottom:30px;letter-spacing:.04em}
+.back-link{display:block;width:fit-content;font-family:'Archivo';font-weight:700;font-size:.88rem;color:var(--gold);margin-bottom:24px;letter-spacing:.04em}
 .back-link:hover{text-decoration:underline}
 .cta-box{background:linear-gradient(150deg,rgba(212,175,55,.1),rgba(10,10,10,.4));border:1px solid var(--line);border-radius:14px;padding:40px;text-align:center;margin-top:60px}
 .cta-box h3{font-size:1.5rem;color:#fff;margin-bottom:12px}
