@@ -243,9 +243,10 @@
 </script>  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<nav style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,10,0.97) !important;backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,175,55,0.18);">
+<nav style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,10,0.97) !important;backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,175,55,0.18);" data-section="navbar">
   <div style="max-width:1400px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px;">
-    <div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:26px;letter-spacing:-0.03em;">
+    <div style="display:flex;align-items:center;gap:12px;font-family:'Archivo',sans-serif;font-weight:900;font-size:26px;letter-spacing:-0.03em;">
+      <img src="https://paymegpt.com/api/landing-pages/images/coding-agent-assets%2F2%2F1781291748954_29973571-3421-4213-A3B3-83AB6DA3C76E.webp" alt="WinVotes Logo" style="height:40px;width:auto;">
       <a href="/" style="color:var(--ink);text-decoration:none;">WinVotes<span style="color:var(--gold)">.ai</span></a>
     </div>
     <div style="display:none;gap:40px;font-size:14px;font-weight:500;" id="nav-links">
@@ -272,15 +273,15 @@
   </div>
 </nav>
 
-<section class="about-hero">
+<section class="about-hero" data-section="hero" style="padding:120px 24px 40px!important">
   <div class="wrap">
     <span class="kicker">About WinVotes.ai</span>
     <h1 style="font-family:'Archivo';font-size:clamp(2.4rem,5vw,4rem);font-weight:900;color:#fff;max-width:760px;margin:18px 0 20px;line-height:1.08">Beaufort County's election digital marketing firm. 4 races. 4 wins.</h1>
-    <p style="color:var(--muted);max-width:580px;font-size:1.1rem">Built in the South Carolina Lowcountry. Trusted by sheriffs, county council members, and the local GOP. Available for campaigns nationwide.</p>
+    <p style="color:var(--muted);max-width:580px;font-size:clamp(1rem,2vw,1.1rem);line-height:1.6">Built in the South Carolina Lowcountry. Trusted by sheriffs, county council members, and the local GOP. Available for campaigns nationwide.</p>
   </div>
 </section>
 
-<div class="about-body">
+<div class="about-body" data-section="about">
 
   <h2>Who We Are</h2>
   <p>WinVotes.ai is a <strong>Beaufort County, South Carolina election digital marketing firm</strong> that builds and runs full digital operations for candidates in local, state, and national races. We are based in Bluffton and serve campaigns across the Lowcountry, throughout South Carolina, and in all 50 states.</p>
@@ -315,8 +316,8 @@
   <p>WinVotes.ai is rooted in the South Carolina Lowcountry &mdash; Bluffton, Hilton Head Island, Beaufort, Port Royal, and the surrounding communities. We understand Beaufort County politics, the local GOP structure, and the voter dynamics in one of the fastest-growing counties in South Carolina.</p>
   <p>That local knowledge informs every campaign we run, whether the race is in Beaufort County or across the country.</p>
 
-  <div class="founder-card">
-    <div class="founder-avatar"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+  <div class="founder-card" style="flex-direction:column;text-align:center">
+    <div class="founder-avatar" style="margin:0 auto"><img src="https://paymegpt.com/objects/quick-uploads/2/d4383d007a38bcee.jpg" alt="Ryan Baggott" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block"/></div>
     <div>
       <div class="founder-name">Ryan Baggott</div>
       <div class="founder-role">Founder, WinVotes.ai &middot; Bluffton, SC</div>
@@ -333,7 +334,7 @@
 
 </div>
 
-<footer>
+<footer data-section="footer">
   <div class="flogo">WinVotes<span>.ai</span></div>
   <nav style="margin:14px 0 10px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap">
     <a href="/" style="color:var(--muted);font-size:.88rem">Home</a>
