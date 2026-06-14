@@ -31,6 +31,9 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:48px 24px;text-align:
 footer p{font-size:12px;color:#444;margin:0}
 footer a{color:#444}
 
+/* ===== HERO SECTION STYLES ===== */
+/* Mobile-first responsive design with gradient background */
+/* Breakpoints: sm(640px), md(768px), lg(1024px), xl(1280px) */
 .book-hero{padding:150px 0 50px;border-bottom:1px solid var(--line);text-align:center}
 .book-hero h1{font-family:'Archivo';font-size:clamp(2.2rem,5vw,3.6rem);font-weight:900;color:#fff;margin:18px auto 18px;line-height:1.08;max-width:780px}
 .book-hero p{color:var(--muted);font-size:1.12rem;max-width:620px;margin:0 auto}
@@ -38,18 +41,28 @@ footer a{color:#444}
 .value-box{background:linear-gradient(150deg,rgba(212,175,55,.1),rgba(10,10,10,.4));border:1px solid var(--line);border-radius:12px;padding:24px 18px;text-align:center}
 .value-box .num{font-family:'Archivo';font-weight:900;font-size:2rem;color:var(--gold);display:block}
 .value-box .lbl{font-size:.82rem;color:var(--muted);margin-top:6px}
-.book-section{max-width:880px;margin:0 auto;padding:70px 24px 90px}
+.book-section{max-width:750px;margin:0 auto;padding:70px 24px 90px}
 .book-section h2{font-family:'Archivo';font-weight:900;font-size:1.8rem;color:#fff;margin:0 0 8px;text-align:center}
 .book-section .sub{color:var(--muted);font-size:1.02rem;text-align:center;margin:0 0 34px}
-.embed-frame{position:relative;width:100%;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.45);background:#0f0f0f}
-.embed-frame iframe{display:block;width:100%;height:1000px;border:0;background:#0f0f0f}
+
+/* ===== CALENDAR EMBED FRAME STYLES ===== */
+/* Container for responsive iframe embedding */
+/* Maintains aspect ratio and transparent background */
+.embed-frame{position:relative;width:100%;background:transparent}
+.embed-frame iframe{display:block;width:100%;height:770px;border:0;background:transparent}
 .fallback{text-align:center;color:#5a5a5a;font-size:.86rem;margin-top:18px}
 .fallback a{color:var(--gold-soft);text-decoration:underline}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+/* Mobile and tablet adjustments */
 @media(max-width:600px){
   .value-row{grid-template-columns:1fr;gap:12px}
-  .embed-frame iframe{height:775px}
+  .embed-frame iframe{height:710px}
 }
 
+/* ===== MOBILE MENU TOGGLE ===== */
+/* Hamburger button animation and overlay menu */
+/* Transforms to X shape on open, shows full-screen overlay */
 .hbtn{background:none;border:0;cursor:pointer;padding:10px;z-index:120;display:flex;flex-direction:column;gap:5px}
 .hbtn span{display:block;width:24px;height:2px;background:var(--gold);transition:.25s}
 body.menu-open .hbtn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
