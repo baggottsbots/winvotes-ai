@@ -229,13 +229,13 @@
 </script>  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="topbar" data-section="section-1">
+<div class="topbar" data-section="topbar">
   <div class="topbar-in">
     <a href="/" class="logo"><img src="https://paymegpt.com/api/landing-pages/images/coding-agent-assets%2F2%2F1781291748954_29973571-3421-4213-A3B3-83AB6DA3C76E.webp" alt="WinVotes" style="height:32px;margin-right:8px;vertical-align:middle;display:inline-block">WinVotes<span>.ai</span></a>
     <button class="hbtn" aria-label="Menu" onclick="document.body.classList.toggle('menu-open')"><span></span><span></span><span></span></button>
   </div>
 </div>
-<div class="overlay" onclick="document.body.classList.remove('menu-open')" data-section="section-2">
+<div class="overlay" onclick="document.body.classList.remove('menu-open')" data-section="mobile-menu">
   <a href="/">Home</a>
   <a href="/about/">About</a>
   <a href="/blog/">Blog</a>
@@ -243,6 +243,11 @@
   <a href="#book" class="btn btn-gold" style="margin-top:14px">Start Winning</a>
 </div>
 
+<!-- ============================================================================ -->
+<!-- HERO SECTION: Campaign strategy call booking headline with value metrics    -->
+<!-- Features: Gradient background, centered content, responsive layout          -->
+<!-- Mobile Padding: Ensures text never touches viewport edges                   -->
+<!-- ============================================================================ -->
 <section class="book-hero" data-section="hero">
   <div class="wrap">
     <span class="kicker">Free Strategy Call &middot; 30 Minutes &middot; No Obligation</span>
@@ -256,15 +261,25 @@
   </div>
 </section>
 
-<section class="book-section" id="book" data-section="section-3">
+<!-- ============================================================================ -->
+<!-- BOOKING SECTION: Calendar embed with fallback link for booking appointment -->
+<!-- Features: Embedded calendar iframe, responsive sizing, fallback URL         -->
+<!-- Mobile Padding: Optimized iframe height for mobile devices (770px desktop, -->
+<!--                 710px mobile) to accommodate calendar interaction           -->
+<!-- ============================================================================ -->
+<section class="book-section" id="book" data-section="booking">
   <h2>Grab a Time on the Calendar</h2>
   <p class="sub">Limited campaign slots open each cycle. Lock yours in below.</p>
   <div class="embed-frame">
-    <iframe src="https://40bcddc1-a9a8-4fe4-9ffe-9c092385f59f-00-x51pd9mf56ml.janeway.replit.dev/book/90729a83?theme=dark&accent=%23D4AF37&bg=%230a0a0a&surface=%231a1a1a&text=%23f2f0eb" title="Book an appointment with WinVotes.ai" loading="eager" allow="clipboard-write"></iframe>
+    <iframe src="https://paymegpt.com/book/90729a83?theme=dark&accent=%23D4AF37&bg=%230a0a0a&surface=%231a1a1a&text=%23f2f0eb" title="Book an appointment with WinVotes.ai" loading="eager" allow="clipboard-write"></iframe>
   </div>
-  <p class="fallback">Calendar not loading? <a href="https://40bcddc1-a9a8-4fe4-9ffe-9c092385f59f-00-x51pd9mf56ml.janeway.replit.dev/book/90729a83?theme=dark&accent=%23D4AF37&bg=%230a0a0a&surface=%231a1a1a&text=%23f2f0eb" target="_blank" rel="noopener">Open the booking page directly.</a></p>
+  <p class="fallback">Calendar not loading? <a href="https://paymegpt.com/book/90729a83?theme=dark&accent=%23D4AF37&bg=%230a0a0a&surface=%231a1a1a&text=%23f2f0eb" target="_blank" rel="noopener">Open the booking page directly.</a></p>
 </section>
 
+<!-- ============================================================================ -->
+<!-- FOOTER SECTION: Company info, navigation links, and contact details         -->
+<!-- Features: Dark background, centered layout, responsive link grid            -->
+<!-- ============================================================================ -->
 <footer data-section="footer">
   <div class="flogo">WinVotes<span>.ai</span></div>
   <div style="margin:14px 0 10px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap">
