@@ -341,20 +341,22 @@
 
 <section style="padding-top:0;padding-bottom:120px" data-section="section-1">
   <div class="wrap">
-    <div class="blog-grid">
 
-      <div class="blog-card featured reveal">
-        <a href="/blog/2-3-million-views-five-races/" class="feat-img" aria-label="Read: 2.3 Million Views Across 5 Local Races">
-          <img src="https://paymegpt.com/objects/quick-uploads/2/383c9d521654a2dd.jpg" alt="WinVotes.ai results graphic: 2.3 million views, 885K plus people reached, 41 videos, 6 campaign websites" width="1600" height="900">
-        </a>
-        <div class="blog-card-body">
-          <div class="kicker">Featured &middot; Results</div>
-          <h2>2.3 Million Views Across 5 Local Races: Here Are the Real Numbers</h2>
-          <p>Eight months of digital campaign work, one county, one team. The headline stats, the race-by-race breakdown, and the fine print most people leave out.</p>
-          <a href="/blog/2-3-million-views-five-races/" class="read-more">Read the Numbers &rarr;</a>
-          <div class="meta">October 2026 &middot; 6 min read</div>
-        </div>
+    <!-- FEATURED: all styling is inline so it never depends on the extracted stylesheet. Wraps to one column on small screens without media queries. -->
+    <div class="blog-card reveal" style="display:flex;flex-direction:row;flex-wrap:wrap;margin:30px 0 0;background:#1a1a1a;border:1px solid rgba(212,175,55,.25);border-radius:20px;overflow:hidden">
+      <a href="/blog/2-3-million-views-five-races/" aria-label="Read: 2.3 Million Views Across 5 Local Races" style="flex:1 1 340px;display:block;background:#0a0a0a;line-height:0;text-decoration:none">
+        <img src="https://paymegpt.com/objects/quick-uploads/2/383c9d521654a2dd.jpg" alt="WinVotes.ai results graphic: 2.3 million views, 885K plus people reached, 41 videos, 6 campaign websites" width="1600" height="900" style="display:block;width:100%;height:auto">
+      </a>
+      <div style="flex:1 1 340px;padding:38px 32px;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:10px;font-weight:700;letter-spacing:3px;color:#D4AF37;text-transform:uppercase">Featured &middot; Results</div>
+        <h2 style="font-family:'Archivo',system-ui,sans-serif;font-size:clamp(24px,3vw,32px);font-weight:900;color:#fff;margin:12px 0 14px;line-height:1.15;letter-spacing:-0.02em">2.3 Million Views Across 5 Local Races: Here Are the Real Numbers</h2>
+        <p style="color:#888;font-size:.98rem;line-height:1.7;margin:0 0 20px">Eight months of digital campaign work, one county, one team. The headline stats, the race-by-race breakdown, and the fine print most people leave out.</p>
+        <a href="/blog/2-3-million-views-five-races/" style="color:#D4AF37;font-family:'Archivo',sans-serif;font-weight:700;font-size:.95rem;text-decoration:none">Read the Numbers &rarr;</a>
+        <div style="color:#666;font-size:.82rem;margin-top:12px">October 2026 &middot; 6 min read</div>
       </div>
+    </div>
+
+    <div class="blog-grid" style="padding-top:24px">
 
       <div class="blog-card reveal">
         <div class="blog-card-img-placeholder"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
