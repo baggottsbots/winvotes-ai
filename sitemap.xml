@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.winvotes.ai/blog/2-3-million-views-five-races/</loc>
+    <lastmod>2026-10-19T03:56:16.374Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.winvotes.ai/blog/</loc>
+    <lastmod>2026-10-19T03:56:11.299Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://www.winvotes.ai/pricing/</loc>
     <lastmod>2026-08-18T11:12:35.892Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -38,11 +48,6 @@
   <url>
     <loc>https://www.winvotes.ai/blog/4-0-win-record/</loc>
     <lastmod>2026-06-13T23:07:20.083Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.winvotes.ai/blog/</loc>
-    <lastmod>2026-06-13T23:07:16.322Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
