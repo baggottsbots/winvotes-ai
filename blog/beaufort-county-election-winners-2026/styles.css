@@ -76,9 +76,10 @@ footer a{color:#444}
 .fig-square figcaption{color:#5a5a5a;font-size:.85rem;margin-top:12px}
 .faq{margin-top:10px}
 .faq details{background:var(--black-card);border:1px solid var(--gold-border);border-radius:12px;margin:12px 0;padding:0}
-.faq summary{cursor:pointer;list-style:none;font-family:'Archivo',sans-serif;font-weight:700;font-size:1.05rem;color:#fff;padding:18px 22px}
+.faq summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:18px;font-family:'Archivo',sans-serif;font-weight:700;font-size:1.05rem;line-height:1.35;color:#fff;padding:18px 20px 18px 22px}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";float:right;color:var(--gold);font-size:1.3rem;line-height:1}
+.faq summary::marker{content:""}
+.faq summary::after{content:"+";flex:0 0 28px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;border:1px solid var(--gold-border);border-radius:50%;color:var(--gold);font-family:'Inter',sans-serif;font-weight:500;font-size:1.15rem;line-height:1}
 .faq details[open] summary::after{content:"\2212"}
 .faq details p{padding:0 22px 18px;margin:0;font-size:1rem}
 .byline{display:flex;gap:16px;align-items:center;background:var(--black-soft);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:48px 0 0}
@@ -90,6 +91,7 @@ footer a{color:#444}
   .winner h3{font-size:1.25rem}
   .post-body h2{font-size:1.5rem}
   .cta-box{padding:30px 20px}
+  .faq summary{font-size:1rem;padding:16px 16px 16px 18px}
 }
 
 .hbtn{background:none;border:0;cursor:pointer;padding:10px;z-index:120;display:flex;flex-direction:column;gap:5px}
