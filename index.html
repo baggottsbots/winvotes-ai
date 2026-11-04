@@ -253,7 +253,7 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var pBtn=document.getElementById('lp-pay-success-btn');
       if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -330,7 +330,7 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||'Thank you for your order.';
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var cBtn=document.getElementById('lp-cart-success-btn');
       if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -406,6 +406,23 @@
     <!-- WIN CARDS -->
     <div style="display:flex;flex-direction:column;gap:20px;">
 
+      <!-- Card 0: November 2026 general election winners -->
+      <a href="/blog/beaufort-county-election-winners-2026/" style="text-decoration:none;color:inherit;display:block;">
+      <div style="background:linear-gradient(150deg,rgba(212,175,55,0.12),#1a1a1a);border:1px solid #D4AF37;border-radius:16px;padding:28px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex-shrink:0;width:48px;height:48px;background:rgba(212,175,55,0.18);border-radius:12px;display:flex;align-items:center;justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#D4AF37" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+          </svg>
+        </div>
+        <div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:3px;color:#D4AF37;margin-bottom:6px;">BEAUFORT COUNTY • NOVEMBER 2026 GENERAL ELECTION</div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:20px;color:#f2f0eb;margin-bottom:8px;">Five Winners, One Election Night</div>
+          <p style="color:#888;font-size:14px;line-height:1.65;margin:0 0 10px;">Doug Seifert (Sheriff), Tamara Becker (Hilton Head Island Town Council Ward 4), Kate Nolan (School Board District 8), Kraig Gordon (County Council District 8), and Dr. Elizabeth Galloway (County Council District 11) all won on November 3, 2026. Most were not incumbents or household names when we started.</p>
+          <span style="font-size:13px;font-weight:700;color:#D4AF37;">Read the full story →</span>
+        </div>
+      </div>
+      </a>
+
       <!-- Card 1: Tanner - star -->
       <div style="background:#1a1a1a;border:1px solid rgba(212,175,55,0.2);border-radius:16px;padding:28px;display:flex;gap:20px;align-items:flex-start;">
         <div style="flex-shrink:0;width:48px;height:48px;background:rgba(212,175,55,0.12);border-radius:12px;display:flex;align-items:center;justify-content:center;">
@@ -445,9 +462,9 @@
           </svg>
         </div>
         <div>
-          <div style="font-size:10px;font-weight:700;letter-spacing:3px;color:#D4AF37;margin-bottom:6px;">BEAUFORT COUNTY COUNCIL • 2026 PRIMARY</div>
-          <div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:20px;color:#f2f0eb;margin-bottom:8px;">Gordon &amp; Galloway — Two Seats, One Night</div>
-          <p style="color:#888;font-size:14px;line-height:1.65;margin:0;">Ran simultaneous full digital operations for Kraig Gordon (District 8, 51.4%) and Dr. Elizabeth Galloway (District 11, 57.0%). Both won their primaries on the same night in June 2026.</p>
+          <div style="font-size:10px;font-weight:700;letter-spacing:3px;color:#D4AF37;margin-bottom:6px;">BEAUFORT COUNTY COUNCIL • 2026 PRIMARY AND GENERAL</div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:20px;color:#f2f0eb;margin-bottom:8px;">Gordon &amp; Galloway — Two Seats, Two Wins</div>
+          <p style="color:#888;font-size:14px;line-height:1.65;margin:0;">Ran simultaneous full digital operations for Kraig Gordon (District 8, 51.4% in the primary) and Dr. Elizabeth Galloway (District 11, 57.0% in the primary). Both won their primaries on the same night in June 2026, and both went on to win in November.</p>
         </div>
       </div>
 
@@ -460,9 +477,9 @@
           </svg>
         </div>
         <div>
-          <div style="font-size:10px;font-weight:700;letter-spacing:3px;color:#D4AF37;margin-bottom:6px;">BEAUFORT COUNTY SHERIFF • 2026 PRIMARY</div>
-          <div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:20px;color:#f2f0eb;margin-bottom:8px;">Doug Seifert — 57.8%</div>
-          <p style="color:#888;font-size:14px;line-height:1.65;margin:0;">End-to-end AI campaign operations: website, AI voter agent, social media, video production, SMS outreach, endorsement pages, and real-time lead CRM. Won the Republican primary by nearly 16 points in a competitive three-way race.</p>
+          <div style="font-size:10px;font-weight:700;letter-spacing:3px;color:#D4AF37;margin-bottom:6px;">BEAUFORT COUNTY SHERIFF • 2026 PRIMARY AND GENERAL</div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:20px;color:#f2f0eb;margin-bottom:8px;">Doug Seifert — 57.8% in the Primary</div>
+          <p style="color:#888;font-size:14px;line-height:1.65;margin:0;">End-to-end AI campaign operations: website, AI voter agent, social media, video production, SMS outreach, endorsement pages, and real-time lead CRM. Won the Republican primary by nearly 16 points in a competitive three-way race, then won the November general election for Sheriff.</p>
         </div>
       </div>
 
