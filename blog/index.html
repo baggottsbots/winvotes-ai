@@ -228,7 +228,7 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var pBtn=document.getElementById('lp-pay-success-btn');
       if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -305,7 +305,7 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||'Thank you for your order.';
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var cBtn=document.getElementById('lp-cart-success-btn');
       if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -335,28 +335,41 @@
   <div class="wrap">
     <span class="kicker">From The Field</span>
     <h1 style="font-family:'Archivo';font-size:clamp(2.4rem,5vw,4rem);font-weight:900;color:#fff;max-width:700px;margin:16px auto 20px">Campaign Strategy &amp; Election Marketing</h1>
-    <p style="color:var(--muted);max-width:560px;margin:0 auto;font-size:1.08rem">Real-world lessons from a political marketing firm with a 4-0 win record in Beaufort County, South Carolina.</p>
+    <p style="color:var(--muted);max-width:560px;margin:0 auto;font-size:1.08rem">Real-world lessons from a political marketing firm winning races across Beaufort County, South Carolina.</p>
   </div>
 </section>
 
 <section style="padding-top:0;padding-bottom:120px" data-section="section-1">
   <div class="wrap">
 
-    <!-- FEATURED: all styling is inline so it never depends on the extracted stylesheet. Wraps to one column on small screens without media queries. -->
-    <div class="blog-card reveal" style="display:flex;flex-direction:row;flex-wrap:wrap;margin:30px 0 0;background:#1a1a1a;border:1px solid rgba(212,175,55,.25);border-radius:20px;overflow:hidden">
-      <a href="/blog/2-3-million-views-five-races/" aria-label="Read: 2.3 Million Views Across 5 Local Races" style="flex:1 1 340px;display:block;background:#0a0a0a;line-height:0;text-decoration:none">
-        <img src="https://paymegpt.com/objects/quick-uploads/2/383c9d521654a2dd.jpg" alt="WinVotes.ai results graphic: 2.3 million views, 885K plus people reached, 41 videos, 6 campaign websites" width="1600" height="900" style="display:block;width:100%;height:auto">
+    <!-- FEATURED: Election winners. All styling is inline so it never depends on the extracted stylesheet. Wraps to one column on small screens without media queries. -->
+    <div class="blog-card reveal" style="display:flex;flex-direction:row;flex-wrap:wrap;margin:30px 0 0;background:#1a1a1a;border:1px solid #D4AF37;border-radius:20px;overflow:hidden">
+      <a href="/blog/beaufort-county-election-winners-2026/" aria-label="Read: Congratulations to Our 2026 Beaufort County Election Winners" style="flex:1 1 340px;display:block;background:#0a0a0a;line-height:0;text-decoration:none">
+        <img src="https://paymegpt.com/objects/quick-uploads/2/377870c783485f1e.jpg" alt="WinVotes.ai Congratulations to Our Winners banner featuring Doug Seifert, Tamara Becker, Kate Nolan, Kraig Gordon, and Dr. Elizabeth Galloway" width="1672" height="941" style="display:block;width:100%;height:auto">
       </a>
       <div style="flex:1 1 340px;padding:38px 32px;display:flex;flex-direction:column;justify-content:center">
-        <div style="font-size:10px;font-weight:700;letter-spacing:3px;color:#D4AF37;text-transform:uppercase">Featured &middot; Results</div>
-        <h2 style="font-family:'Archivo',system-ui,sans-serif;font-size:clamp(24px,3vw,32px);font-weight:900;color:#fff;margin:12px 0 14px;line-height:1.15;letter-spacing:-0.02em">2.3 Million Views Across 5 Local Races: Here Are the Real Numbers</h2>
-        <p style="color:#888;font-size:.98rem;line-height:1.7;margin:0 0 20px">Eight months of digital campaign work, one county, one team. The headline stats, the race-by-race breakdown, and the fine print most people leave out.</p>
-        <a href="/blog/2-3-million-views-five-races/" style="color:#D4AF37;font-family:'Archivo',sans-serif;font-weight:700;font-size:.95rem;text-decoration:none">Read the Numbers &rarr;</a>
-        <div style="color:#666;font-size:.82rem;margin-top:12px">October 2026 &middot; 6 min read</div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:3px;color:#D4AF37;text-transform:uppercase">Featured &middot; Election Results</div>
+        <h2 style="font-family:'Archivo',system-ui,sans-serif;font-size:clamp(24px,3vw,32px);font-weight:900;color:#fff;margin:12px 0 14px;line-height:1.15;letter-spacing:-0.02em">Congratulations to Our 2026 Beaufort County Election Winners</h2>
+        <p style="color:#888;font-size:.98rem;line-height:1.7;margin:0 0 20px">Five candidates, five wins, one digital playbook. Meet the winners and see the SEO-first websites, strategy, video, and paid social behind the results.</p>
+        <a href="/blog/beaufort-county-election-winners-2026/" style="color:#D4AF37;font-family:'Archivo',sans-serif;font-weight:700;font-size:.95rem;text-decoration:none">Meet the Winners &rarr;</a>
+        <div style="color:#666;font-size:.82rem;margin-top:12px">November 2026 &middot; 7 min read</div>
       </div>
     </div>
 
     <div class="blog-grid" style="padding-top:24px">
+
+      <div class="blog-card reveal">
+        <a href="/blog/2-3-million-views-five-races/" aria-label="Read: 2.3 Million Views Across 5 Local Races" style="display:block;background:#0a0a0a;line-height:0;text-decoration:none">
+          <img src="https://paymegpt.com/objects/quick-uploads/2/383c9d521654a2dd.jpg" alt="WinVotes.ai results graphic: 2.3 million views, 885K plus people reached, 41 videos, 6 campaign websites" width="1600" height="900" loading="lazy" style="display:block;width:100%;height:auto">
+        </a>
+        <div class="blog-card-body">
+          <div class="kicker">Results</div>
+          <h2>2.3 Million Views Across 5 Local Races: Here Are the Real Numbers</h2>
+          <p>Eight months of digital campaign work, one county, one team. The headline stats, the race-by-race breakdown, and the fine print most people leave out.</p>
+          <a href="/blog/2-3-million-views-five-races/" class="read-more">Read the Numbers &rarr;</a>
+          <div class="meta">October 2026 &middot; 6 min read</div>
+        </div>
+      </div>
 
       <div class="blog-card reveal">
         <div class="blog-card-img-placeholder"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
