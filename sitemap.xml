@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.winvotes.ai/blog/2-3-million-views-five-races/</loc>
+    <lastmod>2026-11-11T01:39:12.631Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.winvotes.ai/</loc>
+    <lastmod>2026-11-11T01:39:05.708Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://www.winvotes.ai/blog/ai-campaign-operations/</loc>
     <lastmod>2026-11-11T01:38:56.713Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -36,11 +46,6 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://www.winvotes.ai/</loc>
-    <lastmod>2026-11-11T01:37:41.720Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
     <loc>https://www.winvotes.ai/book/</loc>
     <lastmod>2026-11-11T01:37:09.983Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -48,11 +53,6 @@
   <url>
     <loc>https://www.winvotes.ai/blog/beaufort-county-election-winners-2026/</loc>
     <lastmod>2026-11-11T01:37:09.068Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.winvotes.ai/blog/2-3-million-views-five-races/</loc>
-    <lastmod>2026-11-11T01:37:08.697Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
